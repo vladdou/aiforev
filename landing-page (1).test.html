@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test: Body Tag Presence</title>
+    <script src="https://unpkg.com/chai/chai.js"></script>
+    <script src="https://unpkg.com/mocha/mocha.js"></script>
+    <script>
+        mocha.setup('bdd');
+        var assert = chai.assert;
+    </script>
+</head>
+<body>
+    <div id="mocha"></div>
+
+    <script>
+        describe('HTML Structure', function() {
+
+        });
+
+        mocha.run();
+    </script>
+</body>
+</html>

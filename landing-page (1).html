@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шлях до висот</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .header-image {
+            width: 100%;
+            height: 600px;
+            display: flexit('should not have duplicate body opening tags', function() {
+                const html = document.documentElement.outerHTML;
+                const bodyTags = html.match(/<body>/g);
+                assert.equal(bodyTags.length, 1, 'There should be exactly one <body> tag');
+            });;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .header-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .content-section {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .content-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .content-section p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #666;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            transition: background 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #555;
+        }
+
+        .features {
+            padding: 80px 20px;
+            background: #f9f9f9;
+        }
+
+        .features-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        @media (max-width: 768px) {
+            .header-image {
+                height: 200px;
+            }
+
+            .content-section h1 {
+                font-size: 2rem;
+            }
+
+            .content-section p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>it('should have properly closed head tag before body tag', function() {
+const html = document.documentElement.outerHTML;
+const headCloseIndex = html.indexOf('</head>');
+const bodyOpenIndex = html.indexOf('<body');
+it('should have properly closed head tag before body tag', function() {
+const html = document.documentElement.outerHTML;
+const headCloseIndex = html.indexOf('</head>');
+const bodyOpenIndex = html.indexOf('<body');
+assert.isTrue(headCloseIndex < bodyOpenIndex, 'The </head> tag should come before the <body> tag');
+});.isTrue(headCloseIndex < bodyOpenIndex, 'The </head> tag should come before the <body> tag');
+});
+    <div class="header-image">
+        <img src=/images/stairs.jpg alt="Сходи до неба">
+    </div>
+
+    <section class="content-section">
+        <h1>Досягайте нових висот</h1>
+        <p>Кожен крок наближає вас до мети. Почніть свій шлях до успіху сьогодні.</p>
+        <a href="#" class="cta-button">Почати подорож</a>
+    </section>
+
+    <section class="features">
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>Inspiration</h3>
+                    <p>Inspiration can often be found in the most unexpected of places, even at the end of a long and arduous journey. </p>
+            </div>
+            <div class="feature-card">
+                <h3>Development</h3>
+                <p>Continuously improve and discover new opportunitiesі</p>
+            </div>
+            <div class="feature-card">
+                <h3>Achievements</h3>
+                <p>Turn your dreams into reality step by step</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
